@@ -4,6 +4,7 @@ import useGetEventData from './hooks/useGetEventData';
 import HeroImage from './design-system/components/HeroImage/HeroImage';
 import useTabsData from './hooks/useTabsData';
 import Tabs from './design-system/components/Tabs/Tabs';
+import { Header } from '@design-system/ui-kit';
 
 const App: React.FC = () => {
   const { eventData } = useGetEventData();
@@ -11,6 +12,8 @@ const App: React.FC = () => {
 
 
   return (
+    <>
+     <Header />
     <div className="container">
       <div className="left-content">
         <HeroImage
@@ -47,6 +50,8 @@ const App: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
+     
   );
 }
 

@@ -113,9 +113,10 @@ const useTabsData = (eventData: any): TabData => {
 
     const tabHeaders = [
       { key: 'about', label: 'About' },
+      { key: 'tickets', label: 'Tickets' },
       { key: 'speakers', label: speaker_section_title },
-      { key: 'sponsors', label: sponsor_section_title },
       { key: 'workshops', label: workshop_section_title },
+      { key: 'sponsors', label: sponsor_section_title },
     ];
 
     const tabContents = [

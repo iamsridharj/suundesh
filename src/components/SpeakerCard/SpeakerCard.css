@@ -1,0 +1,57 @@
+.speaker-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 10px;
+  }
+  
+  .speaker-image-container {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .speaker-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .speaker-details {
+    flex-grow: 1;
+  }
+  
+  .speaker-details .name {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .speaker-details .designation,
+  .speaker-details .company {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .social-links a img {
+    width: 24px;
+    height: 24px;
+  }
+  

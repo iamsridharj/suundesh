@@ -13,15 +13,7 @@ const App: React.FC = () => {
 
 
 
-  const event = {
-    title: 'KonfHub Frontend Evaluation Task',
-    type: 'Online',
-    payment: 'Paid',
-    liveLinkUrl: 'https://example.com',
-    liveLinkText: 'Open streaming website',
-    date: 'Jul 31st, 2034 6:00 AM - Aug 31st, 2034 6:00 PM IST',
-    countdown: '3654D : 16H : 0M : 42S'
-  };
+ 
 
   return (
     <>
@@ -41,7 +33,7 @@ const App: React.FC = () => {
       </div>
       <div className="right-content">
         <div className="event-details">
-          <EventDetailsCard event={event} />
+          <EventDetailsCard eventData={eventData} />
         </div>
         <div>
           <a href={"https://dev.konfhub.com/checkout/konfhub-frontend-evaluation-task"} className="buy-now-button">

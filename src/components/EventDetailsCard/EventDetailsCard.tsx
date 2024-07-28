@@ -1,7 +1,26 @@
 import React from 'react';
 import './EventDetailsCard.css';
+import CountdownTimer from '../EventTimer/EventTimer';
+import ReadableDate from '../ReadableDate/ReadableDate';
 
-const EventDetailsCard = ({ event }: {event: any}) => {
+const EventDetailsCard = ({ eventData }: {eventData: any}) => {
+
+  if(!eventData) return null
+  const event = {
+    title: eventData.name,
+    type: 'Online',
+    payment: 'Paid',
+    liveLinkUrl: 'https://example.com',
+    liveLinkText: 'Open streaming website',
+    date: 'Jul 31st, 2034 6:00 AM - Aug 31st, 2034 6:00 PM IST',
+    countdown: '3654D : 16H : 0M : 42S',
+    startDate: eventData.start_date,
+    endDate: eventData.end_date,
+    startTime: eventData.start_time,
+    endTime: eventData.end_time,
+    timeZone: eventData.time_zone
+
+  };
   return (
     <>
 
@@ -21,11 +40,27 @@ const EventDetailsCard = ({ event }: {event: any}) => {
         </a>
       </div>
       <div className="event-date">
-        <span>Date: </span>{event.date}
+        <span>Date: </span>
+        <ReadableDate
+          startDate={event.startDate}
+          endDate={event.endDate}
+          timeZone={event.timeZone}
+          startTime={event.startTime}
+          endTime={event.endTime}
+        />
+
       </div>
       <div className="event-countdown">
         <span>EVENT STARTS IN</span>
-        <div className="countdown-timer">{event.countdown}</div>
+        <div className="countdown-timer"> 
+        <CountdownTimer
+          startDate={event.startDate}
+          endDate={event.endDate}
+          timeZone={event.timeZone}
+          startTime={event.startTime}
+          endTime={event.endTime}
+        />
+      </div>
       </div>
       
     </>

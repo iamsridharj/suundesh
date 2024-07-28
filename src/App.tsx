@@ -5,11 +5,23 @@ import HeroImage from './design-system/components/HeroImage/HeroImage';
 import useTabsData from './hooks/useTabsData';
 import Tabs from './design-system/components/Tabs/Tabs';
 import { Header } from '@design-system/ui-kit';
+import EventDetailsCard from './components/EventDetailsCard/EventDetailsCard';
 
 const App: React.FC = () => {
   const { eventData } = useGetEventData();
   const { tabHeaders, tabContents } = useTabsData(eventData);
 
+
+
+  const event = {
+    title: 'KonfHub Frontend Evaluation Task',
+    type: 'Online',
+    payment: 'Paid',
+    liveLinkUrl: 'https://example.com',
+    liveLinkText: 'Open streaming website',
+    date: 'Jul 31st, 2034 6:00 AM - Aug 31st, 2034 6:00 PM IST',
+    countdown: '3654D : 16H : 0M : 42S'
+  };
 
   return (
     <>
@@ -29,12 +41,15 @@ const App: React.FC = () => {
       </div>
       <div className="right-content">
         <div className="event-details">
-          <h2>KonfHub Frontend Evaluation Task</h2>
-          <p><strong>Event Live Link:</strong> <a href="https://dev.konfhub.com/konfhub-frontend-evaluation-task/" target="_blank" rel="noopener noreferrer">Open streaming website</a></p>
-          <p><strong>Date:</strong> Jul 31st, 2034 6:00 AM - Aug 31st, 2034 6:00 PM IST</p>
-          <p><strong>Event Starts In:</strong> 3655D : 14H : 30M : 30S</p>
-          <button className="buy-now">Buy Now</button>
-          <button className="official-website">Official Website</button>
+          <EventDetailsCard event={event} />
+        </div>
+        <div>
+          <a href={"https://dev.konfhub.com/checkout/konfhub-frontend-evaluation-task"} className="buy-now-button">
+                  Buy Now
+              </a>
+              <a href={"https://dev.konfhub.com/konfhub-frontend-evaluation-task"} className="official-website-button">
+                  Official Website <i className="fa fa-external-link" aria-hidden="true"></i>
+              </a>
         </div>
         <div className="hosted-by">
           <h3>Hosted By</h3>

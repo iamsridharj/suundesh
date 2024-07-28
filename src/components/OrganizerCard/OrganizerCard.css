@@ -1,0 +1,61 @@
+.organizer-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 16px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-top: 10px;
+  }
+  
+  .hosted-by {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .organizer-details {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .organizer-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .organizer-info {
+    flex-grow: 1;
+  }
+  
+  .organizer-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+  }
+  
+  .organizer-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  
+  .contact-us {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .contact-icons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
